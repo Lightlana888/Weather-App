@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
+/*------- colors  ------*/
+/* ---- mixins -----*/
+/*----- typo mixins -----*/
+/*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -541,6 +544,7 @@ a, button {
 
 .swiper-wrapper-mobile {
   display: flex;
+  max-width: 260px;
   position: relative;
   justify-content: flex-start;
   align-items: center;

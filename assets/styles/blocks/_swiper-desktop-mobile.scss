@@ -81,10 +81,10 @@
    display: flex;
    flex: 100%;
    max-width: 260px;
-   
+
    //  max-height: 360px;
 
-    //min-width: 170px;
+   //min-width: 170px;
    // min-height: 170px;
    justify-content: flex-start;
    align-items: center;
@@ -94,6 +94,7 @@
 
  .swiper-wrapper-mobile {
    display: flex;
+   max-width: 260px;
    position: relative;
    //margin-bottom: 120%;
    justify-content: flex-start;
@@ -108,9 +109,9 @@
    border: 2px solid #fff;
    //width: 16rem;
 
-  
+
    padding: 0;
-   
+
 
  }
 
