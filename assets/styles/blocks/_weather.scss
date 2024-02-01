@@ -38,7 +38,7 @@ $addInfo-title-fsize: clamp(14px, 0.1rem + 2.5vw, 18px);
 @media screen and (max-width: 428px) {
     #city {
         padding-left: 5px;
-        color: black;
+        background-color: rgba(238, 238, 238, 0.9);
     }
 }
 
