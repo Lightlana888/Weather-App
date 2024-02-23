@@ -52,40 +52,38 @@ export async function updateBackgroundBasedOnWeather(newData) {
 
         if (isNight) {
             switch (weatherDescription) {
-                case 'пасмурно':
+                case 'broken clouds':
                     backgroundImage = 'assets/images/weather/cloudy/clouds_road.jfif';
                     break;
-                case 'переменная облачность':
-                    backgroundImage = 'assets/images/weather/clear/few_clouds2_night.jpg';
+                case 'scattered clouds':
+                    backgroundImage = 'assets/images/weather/clear/night_clouds.jfif';
                     break;
-                case 'небольшая облачность':
-                    backgroundImage = 'assets/images/weather/cloudy/night_clouds.jfif';
-                    break;
-                case 'облачно с прояснениями':
+
+                case 'few clouds':
                     backgroundImage = 'assets/images/weather/cloudy/scattered_clouds_night.jpg';
                     break;
-                case 'небольшой дождь':
+                case 'light rain':
                     backgroundImage = 'assets/images/weather/rain/rain.jfif';
                     break;
-                case 'дождь':
+                case 'moderate rain':
                     backgroundImage = 'assets/images/weather/rain/heavy_rain_night.jfif';
                     break;
-                case 'ясно':
+                case 'clear sky':
                     backgroundImage = 'assets/images/weather/clear/clear_sky_night.jpg';
                     break;
-                case 'туман':
+                case 'mist':
                     backgroundImage = 'assets/images/weather/mist/heavy_mist_night.jfif';
                     break;
-                case 'мгла':
+                case 'haze':
                     backgroundImage = 'assets/images/weather/mist/mist_night_ai.jfif';
                     break;
-                case 'снег':
+                case 'snow':
                     backgroundImage = 'assets/images/weather/snow/snow_forrest_night.jpg';
                     break;
-                case 'небольшой снег':
+                case 'light snow':
                     backgroundImage = 'assets/images/weather/snow/frozen.jpg';
                     break;
-                case 'метель':
+                case 'heavy snow':
                     backgroundImage = 'assets/images/weather/snow/frozen.jfif';
                     break;
                 // Другие случаи для ночных условий
@@ -94,40 +92,38 @@ export async function updateBackgroundBasedOnWeather(newData) {
             }
         } else {
             switch (weatherDescription) {
-                case 'пасмурно':
+                case 'broken clouds':
                     backgroundImage = 'assets/images/weather/cloudy/scattered_clouds_day.jpg';
                     break;
-                case 'переменная облачность':
-                    backgroundImage = 'assets/images/weather/clear/clouds_sunny.jpg';
-                    break;
-                case 'небольшая облачность':
+
+                case 'scattered clouds':
                     backgroundImage = 'assets/images/weather/clear/few_clouds_day.jpg';
                     break;
-                case 'облачно с прояснениями':
+                case 'few clouds':
                     backgroundImage = 'assets/images/weather/clear/clouds_sunny.jpg';
                     break;
-                case 'небольшой дождь':
+                case 'light rain':
                     backgroundImage = 'assets/images/weather/rain/heavy_rain_day.jfif';
                     break;
-                case 'дождь':
+                case 'moderate rain':
                     backgroundImage = 'assets/images/weather/rain/small_rain2.jfif';
                     break;
-                case 'ясно':
+                case 'clear sky':
                     backgroundImage = 'assets/images/weather/clear/few_clouds_day.jpg';
                     break;
-                case 'туман':
+                case 'mist':
                     backgroundImage = 'assets/images/weather/mist/misty_day.jfif';
                     break;
-                case 'мгла':
+                case 'haze':
                     backgroundImage = 'assets/images/weather/mist/big_mist_forrest_day.jfif';
                     break;
-                case 'снег':
+                case 'snow':
                     backgroundImage = 'assets/images/weather/snow/snow_forrest_night.jfif';
                     break;
-                case 'небольшой снег':
+                case 'light snow':
                     backgroundImage = 'assets/images/weather/snow/frozen.jpg';
                     break;
-                case 'метель':
+                case 'heavy snow':
                     backgroundImage = 'assets/images/weather/snow/frozen.jfif';
                     break;
 

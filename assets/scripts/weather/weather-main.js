@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             changePackDependsOnTemperature(newData.main.feels_like);
             //console.log('==  check weather main ==='+newData.main.temp + '--- '+typeof(newData.main.temp)+ '.--  from LS:  '+ localStorage.getItem('test-temp'));
 
-            
+
         } catch (error) {
             console.error('Ошибка при получении данных о погоде:', error);
         }
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             constants.locationElement.textContent = `${newData.name}`;
             constants.temperatureElement.textContent = `${Math.round(newData.main.temp)}°C`;
-            constants.temperatureMin.textContent = `Мин ${Math.round(newData.main.temp_min)}°C `;
+            constants.temperatureMin.textContent = `Min ${Math.round(newData.main.temp_min)}°C `;
 
-            constants.temperatureMax.textContent = ` Макс ${Math.round(newData.main.temp_max)}°C`;
+            constants.temperatureMax.textContent = ` Max ${Math.round(newData.main.temp_max)}°C`;
             constants.temperatureFeelsLike.textContent = ` ${Math.round(newData.main.feels_like)}°C`;
 
             constants.descriptionElement.textContent = `${newData.weather[0].description} `;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem('test-temp', newData.main.temp);
             localStorage.setItem('test', 3);
             changePackDependsOnTemperature(newData.main.feels_like);
-            
+
         } catch (error) {
             console.error('Ошибка инициализации приложения о погоде:', error);
         }

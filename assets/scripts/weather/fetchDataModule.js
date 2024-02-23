@@ -11,14 +11,14 @@ export async function fetchData(location) {
 
     if (location) {
       const { latitude, longitude } = location;
-      API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${constants.apiKey}&units=metric`;
+      API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=en&appid=${constants.apiKey}&units=metric`;
     } else {
       const city = constants.cityInput.value.trim();
       if (/^\d+$/.test(city)) {
         ErrorsModule.showError("Введите корректное название города");
         return;
       } else {
-        API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${constants.apiKey}&units=metric`;
+        API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=${constants.apiKey}&units=metric`;
         constants.cityInput.value = "";
       }
     }

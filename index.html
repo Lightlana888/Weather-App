@@ -1,173 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!--
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!--
     <link rel="stylesheet" href="assets/styles/base/style-swapper.css" />
     -->
-    <link rel="stylesheet" href="assets/styles/style.css" />
+  <link rel="stylesheet" href="assets/styles/style.css" />
 
-    <title>Vite App: Not only weather</title>
-  </head>
+  <title>Vite App: Not only weather</title>
+</head>
 
-  <body>
-    <div id="app">
+<body>
+  <div id="app">
 
-      <div class="container">
-        <div class="block-weather">
-          <div class="container_weather__input">
-            <input
-              type="text"
-              id="city"
-              placeholder="Введите название города"
-            />
-          </div>
-          <div class="container_weather__main-info">
-            <h1 class="container__main-info__location" id="location"></h1>
-            <div
-              class="container__main-info__temperature"
-              id="temperature"
-            ></div>
-            <img
-              class="container__main-info__img"
-              src="''"
-              id="icon"
-              alt="bg-ph"
-            />
-
-            <div
-              class="container__main-info__description"
-              id="description"
-            ></div>
-            <div class="container_weather__main-info_min-max">
-              <div
-                class="container__main-info_min-max__min"
-                id="temperature_min"
-              ></div>
-              <div
-                class="container__main-info_min-max__max"
-                id="temperature_max"
-              ></div>
-            </div>
-          </div>
-          <div class="container_weather__add-info">
-            <div class="container_weather__add-info__feels_like">
-              <div class="container__add-info__feels_like_title">
-                Ощущается как
-              </div>
-              <div
-                class="container__add-info__feels_like_temperature"
-                id="temperature_feels_like"
-              ></div>
-            </div>
-            <div class="container_weather__add-info__compass">
-              <div class="container_weather__add-info__compass_title">
-                Ветер
-              </div>
-              <div class="container_weather__add-info__compass_content">
-                <div
-                  class="container_weather__add-info__compass_content_arrow"
-                  id="arrow"
-                ></div>
-                <div
-                  class="container_weather__add-info__compass_content_arrow_wind-speed"
-                  id="wind-speed"
-                ></div>
-                <div class="divider divider-north">
-                  <span class="divider__text divider__text-north">N</span>
-                </div>
-                <div class="divider divider-south">
-                  <span class="divider__text divider__text-south">S</span>
-                </div>
-                <div class="divider divider-east">
-                  <span class="divider__text divider__text-east">E</span>
-                </div>
-                <div class="divider divider-west">
-                  <span class="divider__text divider__text-west">W</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container__error-container" id="error-container"></div>
+    <div class="container">
+      <div class="block-weather">
+        <div class="container_weather__input">
+          <input type="text" id="city" placeholder="Search for a city" />
         </div>
-        <!--  ============ end weather block      ==============-->
+        <div class="container_weather__main-info">
+          <h1 class="container__main-info__location" id="location"></h1>
+          <div class="container__main-info__temperature" id="temperature"></div>
+          <img class="container__main-info__img" src="''" id="icon" alt="bg-ph" />
 
-        <!--  ============ START CLOTHES block      ==============-->
-        <div class="block-2-3">
-          <div class="block-clothes">
-            <div class="block-clothes-header">
-              <h2 class="clothes-header-title">Что по одежде?</h2>
-
-              <div class="block-clothes--button-box">
-                <button class="button imIce">
-                  Я мерзляк
-                  <span>
-                    <img
-                      src="./assets/images/clothes/imCold.png"
-                      alt="cold emodzi"
-                  /></span>
-                </button>
-                <button class="button imHot">
-                  Я горячая штучка
-                  <span>
-                    <img
-                      src="./assets/images/clothes/imHot.png"
-                      alt="hot emodzi"
-                  /></span>
-                </button>
-              </div>
-              <div class="clothes-error"></div>
+          <div class="container__main-info__description" id="description"></div>
+          <div class="container_weather__main-info_min-max">
+            <div class="container__main-info_min-max__min" id="temperature_min"></div>
+            <div class="container__main-info_min-max__max" id="temperature_max"></div>
+          </div>
+        </div>
+        <div class="container_weather__add-info">
+          <div class="container_weather__add-info__feels_like">
+            <div class="container__add-info__feels_like_title">
+              Feels like
             </div>
-
-            <!--  .sw-1 for turn on/off swiper -->
-            <div class="sw-1">
-              <div class="swiper mySwiper sw-1">
-                <div class="swiper-wrapper"></div>
-                <div class="swiper-pagination"></div>
+            <div class="container__add-info__feels_like_temperature" id="temperature_feels_like"></div>
+          </div>
+          <div class="container_weather__add-info__compass">
+            <div class="container_weather__add-info__compass_title">
+              Wind
+            </div>
+            <div class="container_weather__add-info__compass_content">
+              <div class="container_weather__add-info__compass_content_arrow" id="arrow"></div>
+              <div class="container_weather__add-info__compass_content_arrow_wind-speed" id="wind-speed"></div>
+              <div class="divider divider-north">
+                <span class="divider__text divider__text-north">N</span>
+              </div>
+              <div class="divider divider-south">
+                <span class="divider__text divider__text-south">S</span>
+              </div>
+              <div class="divider divider-east">
+                <span class="divider__text divider__text-east">E</span>
+              </div>
+              <div class="divider divider-west">
+                <span class="divider__text divider__text-west">W</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Solomat Swiper Mobile  -->
-          <div class="test-swiper-mobile">
-            <div class="sw-2">
-            
-  <div class="swiper-mobile mySwiper-mobile">
-    <div class="swiper-wrapper-mobile">
-     
-      <div class="swiper-slide-mobile">
-        <img alt="clothes-pack" class="pack-light" src="assets/images/clothes/solomat-test/hot-rabbit.jpg" />
+        <div class="container__error-container" id="error-container"></div>
       </div>
-      <div class="swiper-slide-mobile">
-        <img alt="clothes-pack" class="pack-warm" src="assets/images/clothes/solomat-test/cold-bear.jpg" />
-      </div>
-    </div>
+      <!--  ============ end weather block      ==============-->
 
-  </div>
-<!--
+      <!--  ============ START CLOTHES block      ==============-->
+      <div class="block-2-3">
+        <div class="block-clothes">
+          <div class="block-clothes-header">
+            <h2 class="clothes-header-title">Outfit recommendations</h2>
+
+            <div class="block-clothes--button-box">
+              <button class="button imIce">
+                I'm always cold
+                <span>
+                  <img src="./assets/images/clothes/imCold.png" alt="cold emodzi" /></span>
+              </button>
+              <button class="button imHot">
+                I'm hot thing
+                <span>
+                  <img src="./assets/images/clothes/imHot.png" alt="hot emodzi" /></span>
+              </button>
+            </div>
+            <div class="clothes-error"></div>
+          </div>
+
+          <!--  .sw-1 for turn on/off swiper -->
+          <div class="sw-1">
+            <div class="swiper mySwiper sw-1">
+              <div class="swiper-wrapper"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solomat Swiper Mobile  -->
+        <div class="test-swiper-mobile">
+          <div class="sw-2">
+
+            <div class="swiper-mobile mySwiper-mobile">
+              <div class="swiper-wrapper-mobile">
+
+                <div class="swiper-slide-mobile">
+                  <img alt="clothes-pack" class="pack-light" src="assets/images/clothes/solomat-test/hot-rabbit.jpg" />
+                </div>
+                <div class="swiper-slide-mobile">
+                  <img alt="clothes-pack" class="pack-warm" src="assets/images/clothes/solomat-test/cold-bear.jpg" />
+                </div>
+              </div>
+
+            </div>
+            <!--
  <button class="button b-1">Гид по одежде</button>
             </div>
             -->
 
-        </div>
+          </div>
 
-       
-     
-        <div class="block-3">
-          <div id="quote"></div>
-          <div id="gif"></div>
+
+
+          <div class="block-3">
+            <div id="quote"></div>
+            <div id="gif"></div>
+          </div>
+          <!--/div  for .block2-3 (below) -->
         </div>
- <!--/div  for .block2-3 (below) -->
-      </div>
         <!--/div  for .container (below) -->
       </div>
 
@@ -175,20 +137,18 @@
     </div>
 
     <!--=========  SCRIPTS ======-->
-   <!-- <script src="node_modules/jquery/dist/jquery.js"></script> 
+    <!-- <script src="node_modules/jquery/dist/jquery.js"></script> 
     <script type="module" src="main.js"></script> 
     -->
-    <script
-      type="module"
-      src="./assets/scripts/weather/weather-main.js"
-    ></script>
+    <script type="module" src="./assets/scripts/weather/weather-main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/scripts/clothes/clothes.js"></script>
     <script src="./assets/scripts/clothes/swiper.js"></script>
-   
-   
+
+
     <script type="module" src="./assets/scripts/gifs/gifs.js"></script>
     <script src="./assets/scripts/quote/quote.js"></script>
-  </body>
+</body>
+
 </html>

@@ -12,7 +12,7 @@ export function updateWindDirection(degrees, speed) {
     const normalizedDegrees = (degrees + 360) % 360;
     const windDirection = getWindDirection(normalizedDegrees);
 
-    constants.windSpeedElement.textContent = `${Math.round(speed)} км/ч`;
+    constants.windSpeedElement.textContent = `${Math.round(speed)} km/h`;
     console.log(`Ветер идет с направления: ${windDirection}`);
 
     arrow.style.transform = `translate(-50%, -100%) rotate(${normalizedDegrees + 180}deg)`;
