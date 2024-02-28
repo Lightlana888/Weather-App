@@ -299,23 +299,17 @@ a, button {
   transform: translateX(-50%) rotate(180deg);
 }
 
+/*хвост стрелки компаса*/
 .container_weather__add-info__compass_content_arrow::before {
   content: "";
   position: absolute;
   width: 10px;
-  /* Диаметр круга */
   height: 10px;
-  /* Диаметр круга */
   background-color: transparent;
-  /* Прозрачный цвет */
   border: 2px solid white;
-  /* Граница круга */
   border-radius: 50%;
-  /* Сделать круглым */
-  top: 95%;
-  /* Расположение круга относительно стрелки */
+  top: 93%;
   left: 50%;
-  /* Расположение круга относительно стрелки */
   transform: translateX(-50%);
 }
 
@@ -326,7 +320,7 @@ a, button {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
   border-radius: 50%;
   background-color: rgba(238, 238, 238, 0.7568627451);
@@ -454,7 +448,6 @@ a, button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
 }
 .imHot img,
 .imIce img {
@@ -597,13 +590,14 @@ a, button {
 
 /*@import 'blocks/advice';*/
 .button {
-  width: 180px;
+  width: 200px;
   height: 47px;
   margin: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #fff;
   background-color: rgba(133, 127, 127, 0.4);
   color: #fff;
+  font-size: clamp(1.1rem, 0.5rem + 1.5vw, 1.3rem);
 }
 
 .imIce {
@@ -640,23 +634,28 @@ a, button {
   width: clamp(8rem, 0.3rem + 15vw, 230px);
 }
 
-#quote {
+.container_weather__advice {
   display: flex;
-  width: 450px;
-  align-items: center;
-  justify-content: center;
-  flex: 50%;
-}
-
-.container_block-3__quote {
-  display: flex;
-  padding: 0.8rem;
-  margin-top: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
-  border-radius: 1.25rem;
-  flex: 450px;
-  overflow: hidden;
+  border-radius: 20px;
+}
+
+.container_weather__advice_title {
+  font-size: clamp(1.1rem, 0.5rem + 1.5vw, 1.3rem);
+}
+
+#container_advice {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*                                     */

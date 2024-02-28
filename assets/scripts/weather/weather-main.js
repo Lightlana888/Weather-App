@@ -1,7 +1,7 @@
 import * as constants from './constants.js';
 import * as wind from './wind.js';
 import * as locationModule from './locationModule.js';
-import * as advice from './advice.js';
+import { fetchAdvice } from './advice.js';
 import * as backgroundModule from './backgroundModule.js';
 import * as fetchDataModule from './fetchDataModule.js';
 import { loadGif } from "../gifs/gifs.js";
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const newData = await fetchDataModule.fetchData(null, city);
 
             displayWeatherData(newData);
-            loadGif();
+
 
             // Используем полученные данные о городе для мобильного свайпера
             localStorage.setItem('test-temp', newData.main.temp);
@@ -59,8 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
             constants.iconElement.src = `https://openweathermap.org/img/w/${newData.weather[0].icon}.png`;
 
 
+
             wind.updateWindDirection(newData.wind.deg, newData.wind.speed);
             backgroundModule.updateBackgroundBasedOnWeather(newData);
+            constants.mainContainerInfo.style.removeProperty('display');
+            constants.addContainerInfo.style.removeProperty('display');
+            constants.errorContainer.style.removeProperty('display');
+            constants.clothesContainer.style.removeProperty('display');
 
             constants.errorContainer.style.display = 'none';
         } else {
@@ -90,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem('test', 3);
             changePackDependsOnTemperature(newData.main.feels_like);
 
+            await fetchAdvice();
         } catch (error) {
             console.error('Ошибка инициализации приложения о погоде:', error);
         }

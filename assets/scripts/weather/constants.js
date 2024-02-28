@@ -14,3 +14,4 @@ export const mainContainerInfo = document.querySelector('.container_weather__mai
 export const addContainerInfo = document.querySelector('.container_weather__add-info')
 export const errorContainer = document.getElementById('error-container');
 export const adviceContainer = document.getElementById('container_advice');
+export const clothesContainer = document.querySelector('.block-2-3');

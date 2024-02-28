@@ -7,6 +7,7 @@ export function showError(message) {
     constants.errorContainer.style.display = 'block';
     constants.mainContainerInfo.style.display = 'none';
     constants.addContainerInfo.style.display = 'none';
+    constants.clothesContainer.style.display = 'none';
 }
 
 export function hideError() {

@@ -212,23 +212,18 @@ $block-input-fsize: clamp(1.1rem, 0.5rem + 1.5vw, 1.3rem);
     transform: translateX(-50%) rotate(180deg);
 }
 
+/*хвост стрелки компаса*/
+
 .container_weather__add-info__compass_content_arrow::before {
     content: '';
     position: absolute;
     width: 10px;
-    /* Диаметр круга */
     height: 10px;
-    /* Диаметр круга */
     background-color: transparent;
-    /* Прозрачный цвет */
     border: 2px solid white;
-    /* Граница круга */
     border-radius: 50%;
-    /* Сделать круглым */
-    top: 95%;
-    /* Расположение круга относительно стрелки */
+    top: 93%;
     left: 50%;
-    /* Расположение круга относительно стрелки */
     transform: translateX(-50%);
 }
 
@@ -239,11 +234,9 @@ $block-input-fsize: clamp(1.1rem, 0.5rem + 1.5vw, 1.3rem);
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: $block-body-fsize;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
-
     border-radius: 50%;
-
     background-color: #eeeeeec1;
     color: #333;
     width: clamp(50px, 5rem + 10vw, 100px);

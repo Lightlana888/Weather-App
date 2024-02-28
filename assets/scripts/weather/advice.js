@@ -16,7 +16,7 @@ export async function fetchAdvice() {
         // Проверяем, есть ли текст совета в данных
         if (data && data.slip && data.slip.advice) {
             // Вывод совета на страницу
-            constants.adviceContainer.textContent = data.slip.advice;
+            constants.adviceContainer.textContent = `"${data.slip.advice}"`;
         } else {
             throw new Error('Данные о совете отсутствуют или некорректны');
         }
