@@ -134,6 +134,7 @@ a, button {
   border: none;
   padding-left: 25px;
   font-family: Lucida Sans Unicode;
+  font-size: clamp(1.1rem, 0.5rem + 1.5vw, 1.3rem);
 }
 
 #city:focus {
@@ -159,32 +160,32 @@ a, button {
   color: #fff;
   border-radius: 20px;
   width: 100%;
-  min-height: 45vh;
-  max-height: 55vh;
+  min-height: auto;
+  max-height: auto;
 }
 
 /*местоположение*/
 #location {
   justify-self: center;
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(2rem, 0.5rem + 2vw, 3rem);
 }
 
 /*температура*/
 #temperature {
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(2rem, 0.5rem + 2vw, 3rem);
   justify-self: center;
 }
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-  width: clamp(3rem, 1.5rem + 10vw, 5rem);
+  width: clamp(4rem, 1.5rem + 10vw, 6rem);
   justify-self: center;
   margin: 0.3rem 0 0.3rem 0;
 }
 
 /*описание погодных условий*/
 #description {
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -198,7 +199,7 @@ a, button {
 .container_weather__main-info_min-max {
   display: flex;
   gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   text-align: center;
 }
 
@@ -232,7 +233,7 @@ a, button {
 #temperature_feels_like {
   color: white;
   align-self: center;
-  font-size: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   margin-top: 2rem;
 }
 
@@ -251,7 +252,7 @@ a, button {
 /*компас название контейнера*/
 .container__add-info__feels_like_title,
 .container_weather__add-info__compass_title {
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   color: white;
   align-self: flex-start;
   margin: 0.5rem;
@@ -273,13 +274,13 @@ a, button {
 /* стрелка компаса */
 .container_weather__add-info__compass_content_arrow {
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1px;
-  height: 60px;
+  height: 100%;
   background-color: white;
-  transform-origin: bottom;
+  transform-origin: center;
   transition: transform 0.5s;
 }
 
@@ -292,9 +293,29 @@ a, button {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 16px solid white;
-  bottom: 100%;
+  bottom: 91%;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
+}
+
+.container_weather__add-info__compass_content_arrow::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  /* Диаметр круга */
+  height: 10px;
+  /* Диаметр круга */
+  background-color: transparent;
+  /* Прозрачный цвет */
+  border: 2px solid white;
+  /* Граница круга */
+  border-radius: 50%;
+  /* Сделать круглым */
+  top: 95%;
+  /* Расположение круга относительно стрелки */
+  left: 50%;
+  /* Расположение круга относительно стрелки */
+  transform: translateX(-50%);
 }
 
 /* контейнер с инфой скорость ветра */
@@ -303,10 +324,17 @@ a, button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   font-weight: 400;
   text-align: center;
-  color: white;
+  border-radius: 50%;
+  background-color: rgba(238, 238, 238, 0.7568627451);
+  color: #333;
+  width: clamp(50px, 5rem + 10vw, 100px);
+  height: clamp(50px, 5rem + 10vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*дивайдеры-метки на компасе*/
@@ -388,7 +416,7 @@ a, button {
   background-color: rgba(143, 92, 92, 0.438);
   color: rgb(238, 230, 219);
   border-radius: 20px;
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
 }
 
 .block-clothes {
@@ -406,7 +434,7 @@ a, button {
 .clothes-header-title {
   color: #fff;
   text-shadow: 2px 2px 2px rgb(80, 80, 80);
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
   text-align: center;
 }
 

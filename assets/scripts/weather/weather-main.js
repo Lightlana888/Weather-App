@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             constants.locationElement.textContent = `${newData.name}`;
             constants.temperatureElement.textContent = `${Math.round(newData.main.temp)}°C`;
-            constants.temperatureMin.textContent = `Min ${Math.round(newData.main.temp_min)}°C `;
+            constants.temperatureMin.textContent = `Min: ${Math.round(newData.main.temp_min)}°C `;
 
-            constants.temperatureMax.textContent = ` Max ${Math.round(newData.main.temp_max)}°C`;
+            constants.temperatureMax.textContent = ` Max: ${Math.round(newData.main.temp_max)}°C`;
             constants.temperatureFeelsLike.textContent = ` ${Math.round(newData.main.feels_like)}°C`;
 
             constants.descriptionElement.textContent = `${newData.weather[0].description} `;
