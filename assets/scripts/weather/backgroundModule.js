@@ -52,6 +52,9 @@ export async function updateBackgroundBasedOnWeather(newData) {
 
         if (isNight) {
             switch (weatherDescription) {
+                case 'overcast clouds':
+                    backgroundImage = 'assets/images/weather/cloudy/night_clouds.jfif';
+                    break;
                 case 'broken clouds':
                     backgroundImage = 'assets/images/weather/cloudy/clouds_road.jfif';
                     break;
