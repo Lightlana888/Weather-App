@@ -56,7 +56,7 @@ export async function updateBackgroundBasedOnWeather(newData) {
                     backgroundImage = 'assets/images/weather/cloudy/clouds_road.jfif';
                     break;
                 case 'scattered clouds':
-                    backgroundImage = 'assets/images/weather/clear/night_clouds.jfif';
+                    backgroundImage = 'assets/images/weather/cloudy/night_clouds.jfif';
                     break;
 
                 case 'few clouds':
