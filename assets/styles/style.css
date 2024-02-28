@@ -326,7 +326,7 @@ a, button {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(1.1rem, 0.5rem + 2vw, 2rem);
-  font-weight: 400;
+  font-weight: 800;
   text-align: center;
   border-radius: 50%;
   background-color: rgba(238, 238, 238, 0.7568627451);
