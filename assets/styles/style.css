@@ -141,11 +141,19 @@ a, button {
   border: none;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 1024px) {
   #city {
     padding-left: 5px;
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(238, 238, 238, 0.7);
     color: #333;
+  }
+  #city::-moz-placeholder {
+    opacity: 1;
+    color: rgb(41, 41, 41);
+  }
+  #city::placeholder {
+    opacity: 1;
+    color: rgb(41, 41, 41);
   }
 }
 /*контейнер с основной инфой: город, температура, мин и макс температура*/

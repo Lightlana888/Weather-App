@@ -127,7 +127,7 @@ export async function updateBackgroundBasedOnWeather(newData) {
                     backgroundImage = 'assets/images/weather/snow/frozen.jpg';
                     break;
                 case 'heavy snow':
-                    backgroundImage = 'assets/images/weather/snow/frozen.jfif';
+                    backgroundImage = 'assets/images/weather/snow/frozen.jpg';
                     break;
 
                 // Другие случаи для дневных условий
