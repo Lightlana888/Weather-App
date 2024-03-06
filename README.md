@@ -1,5 +1,5 @@
 
-# Weather App with Outfit recommendations
+### Weather App with Outfit recommendations
 
 Weather App with main weather information recieved from API
 - location or city search;
@@ -10,5 +10,9 @@ Weather App with main weather information recieved from API
   Additional functions:
 - Outfit recommendations (On the desktop version there is the ability to choose outfit version: more warm or more cold);
 - Random Affirmation of the day;
-- 
-![Weather_App](https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0)
+
+<div align="center">
+<a href="https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0">
+    <img src="https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0" width="350" />
+  </a>
+<div/>
