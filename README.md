@@ -12,7 +12,7 @@ Weather App with main weather information recieved from API
 - Random Affirmation of the day;
 
 <div align="center">
-<a href="https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0">
+<a href="https://lightlana888.github.io/Weather-App/">
     <img src="https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0" width="350" />
   </a>
 <div/>
