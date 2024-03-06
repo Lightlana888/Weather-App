@@ -1,13 +1,14 @@
 
 
-# Веб-приложение Not only weather.
 
-Приложение погоды с основной информацией, полученной из открытого апи погоды:
-- локация либо поиск по городу;
-- температура;
-- описание погодных условий;
-- минимальная и максимальная температуры в сутки;
-- ветер (скорость и направление);
-- Присутствует дополнительный функционал:
-- рекомендации по одежде (выбор вариантов одежы: потеплее либо похолоднее);
-- совет дня;
+# Weather App with Outfit recommendations
+
+Weather App with main weather information recieved from API
+- location or city search;
+- temperature;
+- weather discription;
+- minimum and maximum temperature per day;
+- wind (speed and direction);
+  Additional functions:
+- Outfit recommendations (On the desktop version there is the ability to choose outfit version: more warm or more cold);
+- Random Affirmation of the day;
