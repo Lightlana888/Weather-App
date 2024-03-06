@@ -1,3 +1,4 @@
+![Weather_App](https://github.com/Lightlana888/Weather-App/assets/134335475/92b33c7b-a104-4cf7-abb4-a35a8e3838b0)
 
 
 
